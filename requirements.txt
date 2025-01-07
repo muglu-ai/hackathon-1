@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+SQLAlchemy
+alembic
+googletrans==4.0.0-rc1
+google-cloud-translate
+apscheduler
+pydantic
