@@ -10,4 +10,6 @@ class Digest(Base):
     game_id = Column(Integer, nullable=False)  # Game ID from the API
     summary = Column(Text, nullable=False)     # Digest summary
     language = Column(String(10), nullable=False, default="en")  # Language code
+    video_url = Column(String, nullable=True)  # URL for video digest
+    audio_url = Column(String, nullable=True)  # URL for audio digest
     created_at = Column(DateTime, default=datetime.utcnow)

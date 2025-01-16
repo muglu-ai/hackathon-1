@@ -1,4 +1,5 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
+
 from utils.stats_api import (
     fetch_schedule,
     fetch_team_roster,
@@ -13,12 +14,16 @@ router = APIRouter(prefix="/mlb", tags=["MLB Highlights"])
 
 
 @router.get("/schedule/")
-def get_schedule(season: int, game_type: str = "R"):
+def get_schedule(season: int = Query(None, description="Season year (default: current year)"),
+    game_type: str = Query("R", description="Game type (default: 'R')"),
+    page: int = Query(1, description="Page number for pagination (default: 1)"),
+    page_size: int = Query(10, description="Number of items per page (default: 10)"),
+):
     """
     Get the MLB schedule for a given season and game type.
     """
     try:
-        return fetch_schedule(season, game_type)
+        return fetch_schedule(season, game_type, page, page_size)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

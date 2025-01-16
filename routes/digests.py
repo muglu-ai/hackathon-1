@@ -6,7 +6,7 @@ from services.text_digests import generate_text_digest
 
 router = APIRouter()
 
-@router.post("/digests/")
+@router.post("/digests")
 async def create_digest(game_id: int):
     db = SessionLocal()
     try:

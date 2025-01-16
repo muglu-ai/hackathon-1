@@ -12,6 +12,8 @@ Base.metadata.create_all(bind=engine)
 app.include_router(preferences.router)
 #app.include_router(digests.router)
 app.include_router(highlights.router)
+app.include_router(digests.router)
+
 
 @app.get("/")
 def read_root():
