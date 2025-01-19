@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import '../../style/game.css'; // You can customize styles as needed
 import '../../types/game.ts'
 
-const API_BASE_URL = "http://127.0.0.1:8000/mlb/schedule/";
+const API_BASE_URL = "http://34.72.213.107:8000/mlb/schedule/";
 
 const fetchGames = async (season: number, gameType: string, page: number, pageSize: number) => {
     const response = await fetch(`${API_BASE_URL}?season=${season}&game_type=${gameType}&page=${page}&page_size=${pageSize}`);
