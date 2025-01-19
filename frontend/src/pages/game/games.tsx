@@ -6,7 +6,7 @@ To-Do
 - Filter the games by date, year
 - live matches section should on be displayed when there are live matches
  */
-
+/*
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -30,6 +30,7 @@ const Game = () => {
 
     useEffect(() => {
         // Filter games based on search term
+        // @ts-ignore
         setFilteredGames(games.filter(game =>
             game.name.toLowerCase().includes(searchTerm.toLowerCase())
         ));

@@ -9,29 +9,17 @@ const fetchGames = async (season: number, gameType: string, page: number, pageSi
     return await response.json();
 };
 
-const fetchTeamLogo = async (teamName: any) => {
+const fetchTeamLogo = async (teamName: string) => {
   const response = await fetch(`https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${teamName}`);
   //from response use strLogo to fetch image
   const data = await response.json();
   return data.teams && data.teams.length > 0 ? data.teams[0].strLogo : null;
 };
 
-interface Game {
-    gameId: string;
-    gameDate: string;
-    teams: string;
-    venue: string;
-    description?: string;
-    dayOrNight?: string;
-    seriesDescription?: string;
-    awayScoreWin : number;
-    homeScoreWin : number;
-    awayScore : number;
-    homeScore : number;
-    content: string;
-}
 
-// @ts-ignore
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const GameCard = ({game, onClick, key}) => {
     //console.log(game);
     const {gameDate, teams, venue, status, content} = game;
@@ -43,8 +31,8 @@ const GameCard = ({game, onClick, key}) => {
     const homeScoreLoss = `${teams.home.losses}`;
     const awayScoreLoss = `${teams.away.losses}`;
     const contents = `${content.link}`;
-    console.log(contents);
-    ``
+    
+    //console.log(contents);
 
     const gameTime = new Date(gameDate).toLocaleString();
 
@@ -74,13 +62,18 @@ const GameCard = ({game, onClick, key}) => {
                         <p className="text-sm text-gray-600">{ homeScoreWin  } - { homeScoreLoss  } </p>
                         <p className="text-sm text-gray-600">{ awayScoreWin } - {awayScoreLoss}</p>
                     </div>
+                    <div className='hidden'>
+                        <p className="text-sm text-gray-600">{contents} - {key}</p>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-// @ts-ignore
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 const GameDetails = ({game, onClose}) => {
     const {gameDate, teams, venue, description, dayOrNight, seriesDescription, gameId} = game;
     const gameTime = new Date(gameDate).toLocaleString();
@@ -94,6 +87,7 @@ const GameDetails = ({game, onClose}) => {
             const awayLogoUrl = await fetchTeamLogo(teams.away.name);
             setHomeLogo(homeLogoUrl);
             setAwayLogo(awayLogoUrl);
+            console.log(gameId);
         };
         loadLogos();
     }, [teams]);
@@ -155,7 +149,7 @@ const App = () => {
             <div className="game-list sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {gamesData.games.map((game) => (
 
-                    <GameCard key={game.gameId} game={game} onClick={setSelectedGame}/>
+                    <GameCard key={game} game={game} onClick={setSelectedGame}/>
                 ))}
             </div>
             <div className="pagination">

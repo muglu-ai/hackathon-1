@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from database import engine, Base
-from routes import preferences, digests, highlights
+from app.database import engine, Base
+from app.routes import preferences, digests, highlights
 from fastapi.middleware.cors import CORSMiddleware
 
 

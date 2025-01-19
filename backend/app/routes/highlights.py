@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Query
 
-from utils.stats_api import (
+from app.utils.stats_api import (
     fetch_schedule,
     fetch_team_roster,
     fetch_team_info,

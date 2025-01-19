@@ -1,4 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="87204075-dd50-45bf-a6fc-48a51042ebec" name="Changes" comment="containerized initial">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FastAPIProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FastAPIProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/FastAPIProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/003336b8d50d_add_video_url_and_audio_url_to_digest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/24106cec0bdc_create_digests_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/2d3a2f907e7d_initial_migration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/73aa8aa5c8e8_create_digests_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/b4940c21e322_initial_migration.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/alembic/versions/ec141a5adc31_create_digests_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/crud.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mlb_highlights.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/Digest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/openapi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/digests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/highlights.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/preferences.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/schedule_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/schedule_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/schedule_data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/schemas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/audio_digests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/text_digests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/video_digests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test_highlights.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/test_main.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tests/test_digests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/tests/test_preferences.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/digest_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/raw_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/scheduler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/stats_api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/translator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/card/example.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/card/example.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/game/games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/game/games.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/home/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/home/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/types/game.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2rr7xL8g2S1wDXJLFH77HgW0Nv6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;container&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\SCI\\PycharmProjects\\FastAPIProject\\frontend\\node_modules\\typescript\\lib&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
+        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87204075-dd50-45bf-a6fc-48a51042ebec" name="Changes" comment="" />
+      <created>1737305587331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737305587331</updated>
+      <workItem from="1737305588884" duration="3964000" />
+    </task>
+    <task id="LOCAL-00001" summary="containerized initial">
+      <option name="closed" value="true" />
+      <created>1737305695314</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737305695314</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="containerized initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="containerized initial" />
+  </component>
 </project>

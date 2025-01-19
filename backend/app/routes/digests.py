@@ -1,8 +1,8 @@
 # app/routers/digests.py
 from fastapi import APIRouter, HTTPException
-from models.Digest import Digest
-from database import SessionLocal
-from services.text_digests import generate_text_digest
+from app.models.Digest import Digest
+from app.database import SessionLocal
+from app.services.text_digests import generate_text_digest
 
 router = APIRouter()
 

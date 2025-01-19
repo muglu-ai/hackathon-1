@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from database import get_db
-from models import User, Preference
-from schemas import UserCreate, PreferenceCreate
+from app.database import get_db
+from app.models import User, Preference
+from app.schemas import UserCreate, PreferenceCreate
 
 router = APIRouter(prefix="/preferences", tags=["preferences"])
 
