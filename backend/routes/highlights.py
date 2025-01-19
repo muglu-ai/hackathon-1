@@ -8,6 +8,7 @@ from utils.stats_api import (
     fetch_live_game_data,
     fetch_game_timestamps,
     fetch_game_at_timecode,
+    fetch_game_content,
 )
 
 router = APIRouter(prefix="/mlb", tags=["MLB Highlights"])
@@ -23,6 +24,7 @@ def get_schedule(season: int = Query(None, description="Season year (default: cu
     Get the MLB schedule for a given season and game type.
     """
     try:
+        #print(season, game_type, page, page_size)
         return fetch_schedule(season, game_type, page, page_size)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -38,6 +40,20 @@ def get_team_roster(team_id: int, season: int):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+#fetch game content by game id
+@router.get("/game/{game_pk}/content/")
+def get_game_content(game_pk: int):
+    """
+    Get the content for a specific game.
+    """
+    try:
+        return fetch_game_content(game_pk)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+#get game highlights by game id
 
 @router.get("/team/{team_id}/info/")
 def get_team_info(team_id: int, season: int = None):

@@ -19,10 +19,6 @@ const Game = () => {
     useEffect(() => {
         // Fetch games from API with query parameters
         axios.get('/mlb/schedule/', {
-            params: {
-                season: 2025,
-                game_type: 'R'
-            }
         })
         .then(response => {
             setGames(response.data);

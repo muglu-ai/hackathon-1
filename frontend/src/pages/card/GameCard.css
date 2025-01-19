@@ -1,0 +1,109 @@
+.game-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background: #cfcce8;
+}
+
+.time {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.team {
+  text-align: center;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.team-name {
+  display: block;
+  font-weight: bold;
+}
+
+.team-score {
+  font-size: 14px;
+  color: #666;
+}
+
+.venue {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.player-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.player {
+  text-align: center;
+  flex: 1;
+}
+
+.team-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.player-info {
+  text-align: center;
+}
+
+.player-image-placeholder {
+  width: 50px;
+  height: 50px;
+  background: #0f12cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+.player-name {
+  font-size: 14px;
+  color: #666;
+}
+
+.preview {
+  text-align: center;
+}
+
+.preview-button {
+  background: #007bff;
+  color: #492c2c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.preview-button:hover {
+  background: #0056b3;
+}
